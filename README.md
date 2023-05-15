@@ -21,3 +21,22 @@ To get started with Charactolyzer, follow these steps:
 ## Conclusion
   
 By following the steps outlined above, you can start using the Charactolyzer project to predict the personality traits of individuals based on their WhatsApp group chats. Remember to customize the project according to your specific requirements and dataset.
+
+## Demonstration of the Project:
+
+https://github.com/LunaticPython2003/Charactolyzer-DevJam-2023/assets/34091879/6b4187dc-2077-4a6e-8e7a-b3c49b038972
+
+## 😍 Our Valuable Contributors
+
+Thanks to these wonderful people ✨
+
+<a href="https://github.com/LunaticPython2003/Charactolyzer-DevJam-2023/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LunaticPython2003/Charactolyzer-DevJam-2023" />
+</a>
+
+💙 Happy Contributions !! 💙
+
+## 📜 License 
+
+Distributed under the MIT License. 
+[MIT](LICENSE)
