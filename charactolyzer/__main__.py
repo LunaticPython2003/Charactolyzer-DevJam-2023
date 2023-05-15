@@ -1,3 +1,4 @@
-import os
-os.chdir('charactolyser')
+import os, nltk
+os.chdir('charactolyzer')
+nltk.download('punkt')
 os.system("python main.py")
