@@ -5,6 +5,10 @@ Charactolyzer is a project that predicts a person's character based on the chats
 
 To get started with Charactolyzer, follow these steps:
 
+- ### Prerequisite
+  Export the WhatsApp chats and put it in your convinient location <br> <br>
+ <b> Note - Currently, only group chats work </b>
+
 - ### Install Dependencies
   ``` shell
   pip install -r requirements.txt
@@ -24,7 +28,8 @@ By following the steps outlined above, you can start using the Charactolyzer pro
 
 ## Demonstration of the Project:
 
-https://github.com/LunaticPython2003/Charactolyzer-DevJam-2023/assets/34091879/6b4187dc-2077-4a6e-8e7a-b3c49b038972
+https://github.com/LunaticPython2003/Charactolyzer-DevJam-2023/assets/34091879/b67bc105-653f-435f-881f-7b4fa9e7c76d
+
 
 ## 😍 Our Valuable Contributors
 
