@@ -1,8 +1,8 @@
 from streamlit_lottie import st_lottie
 import streamlit as st
-from PIL import Image
 import json
 import model
+import re
 
 st.set_page_config(page_title="Analysis", page_icon="📈")
 
@@ -34,8 +34,18 @@ with col3:
 uploaded_file = st.file_uploader("Choose a .txt file", type=['txt'])
 if uploaded_file is not None:
     file = uploaded_file.read()
-    with open('uploads/test.txt', "wb") as temp:
+    text = list()
+    formatted_text = list()
+    with open('uploads/test.txt', 'wb') as temp:
         temp.write(file)
+    with open('uploads/test.txt', 'r', errors="ignore") as temp:
+        for x in temp:
+            text.append(x)
+    
+    for i in text:
+        formatted_text.append(re.sub(r'(?<!\n)\n(?!\n)', ' ', i))
+    with open('uploads/test.txt', 'w', errors="ignore") as temp:
+        temp.writelines(line + '\n' for line in formatted_text)
 
     if st.button('Analyse'):
         scores = model.main()

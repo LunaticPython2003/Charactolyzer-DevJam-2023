@@ -2,13 +2,7 @@ from afinn import Afinn
 import nltk
 import string
 import re
-
-rude_threshold = -5
-satisfied_threshold = 2
-unsatisfied_threshold = -2
-angry_threshold = -5
-sad_threshold = -3
-happy_threshold = 4
+import streamlit as st
 
 def predict(names, index = 0, score = 0):
     if index == len(names):
@@ -25,8 +19,19 @@ def predict(names, index = 0, score = 0):
     print(score)
     return predict(names, index+1, score)
 
+rude_threshold = -5
+satisfied_threshold = 2
+unsatisfied_threshold = -2
+angry_threshold = -5
+sad_threshold = -3
+happy_threshold = 4
+
 def character(score):
-    if score <= rude_threshold:
+    if score == 0:
+        emotion = 'neutral'
+    elif score == 1:
+        emotion = 'polite'
+    elif score <= rude_threshold:
         emotion = 'rude'
     elif score >= happy_threshold:
         emotion = 'happy'
@@ -38,7 +43,6 @@ def character(score):
         emotion = 'angry'
     elif score <= sad_threshold:
         emotion = 'sad'
-
     return emotion
 
 def main():
@@ -61,10 +65,11 @@ def main():
 
     print(analyze)
     scores = dict()
+    prediction = dict()
     for i in analyze.keys():
-        print(i)
         temp = analyze[i]
         scores[i] = predict(temp)
-        scores[i] = character(scores[i])
-
-    return scores
+        prediction[i] = character(int(scores[i]))
+    st.write('The individual scores are - ')
+    st.write(scores)
+    return prediction
