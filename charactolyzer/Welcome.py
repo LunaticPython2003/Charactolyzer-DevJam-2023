@@ -3,6 +3,9 @@ import json
 from PIL import Image
 
 from streamlit_lottie import st_lottie
+from streamlit_extras.app_logo import add_logo
+
+st.set_page_config(page_title='Charactolyzer', page_icon = 'assets/nav-icon.jpg', initial_sidebar_state = 'auto')
 
 def get(path: str):
     with open(path, "r") as p:

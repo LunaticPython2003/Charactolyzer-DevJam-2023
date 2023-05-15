@@ -37,7 +37,6 @@ if uploaded_file is not None:
     with open('uploads/test.txt', "wb") as temp:
         temp.write(file)
 
-
-if st.button('Analyse'):
-    scores = model.main()
-    st.write(scores)
+    if st.button('Analyse'):
+        scores = model.main()
+        st.write(scores)
